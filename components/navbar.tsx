@@ -1,6 +1,6 @@
-import { auth, signOut } from "@/app/(auth)/auth";
-import Link from "next/link";
-import { History } from "./history";
+import { auth, signOut } from '@/app/(auth)/auth';
+import Link from 'next/link';
+import { History } from './history';
 
 export const Navbar = async () => {
   let session = await auth();
@@ -22,7 +22,7 @@ export const Navbar = async () => {
           <div className="flex-col absolute top-6 right-0 w-full pt-5 group-hover:flex hidden">
             <form
               action={async () => {
-                "use server";
+                'use server';
                 await signOut();
               }}
             >

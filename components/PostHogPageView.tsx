@@ -2,9 +2,9 @@
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
-import { posthog } from '@/lib/posthog';
+import { posthogClient } from '@/lib/posthog';
 
-export default function PostHogClient() {
+export function PostHogPageView() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -14,7 +14,7 @@ export default function PostHogClient() {
       if (searchParams && searchParams.toString()) {
         url = url + `?${searchParams.toString()}`;
       }
-      posthog.capture('$pageview', {
+      posthogClient.capture('$pageview', {
         $current_url: url,
       });
     }

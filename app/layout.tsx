@@ -1,10 +1,8 @@
-'use client';
-
 import { Navbar } from '@/components/navbar';
 import { Metadata } from 'next';
 import { Toaster } from 'sonner';
 import './globals.css';
-import PostHogClient from '@/components/PostHogClient';
+import { Providers } from '@/components/Providers';
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -23,10 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Toaster position="top-center" />
-        <Navbar />
-        <PostHogClient />
-        {children}
+        <Providers>
+          <Toaster position="top-center" />
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );
