@@ -1,3 +1,5 @@
+'use client';
+
 import { Navbar } from '@/components/navbar';
 import { Metadata } from 'next';
 import { Toaster } from 'sonner';
