@@ -16,6 +16,7 @@
     "@vercel/kv": "^2.0.0",
     "ai": "3.3.41",
     "bcrypt-ts": "^5.0.2",
+    "caniuse-lite": "^1.0.30001669",
     "classnames": "^2.5.1",
     "d3-scale": "^4.0.2",
     "date-fns": "^3.6.0",
