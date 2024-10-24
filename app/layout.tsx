@@ -20,13 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Providers>
+      <Providers>
+        <body>
           <Toaster position="top-center" />
           <Navbar />
           {children}
-        </Providers>
-      </body>
+        </body>
+      </Providers>
     </html>
   );
 }

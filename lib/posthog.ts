@@ -1,19 +1,22 @@
 import posthog from 'posthog-js'
 import { PostHog } from 'posthog-js'
+import getConfig from 'next/config'
 
 export const posthogClient: PostHog = posthog
 
 export const initPostHog = () => {
   if (typeof window !== 'undefined') {
-    const posthogKey = process.env.POSTHOG_KEY
     const posthogHost = process.env.POSTHOG_HOST || 'https://us.i.posthog.com'
+    const posthogKey = process.env.POSTHOG_KEY || ''
 
-    posthogClient.init(posthogKey, {
-      api_host: posthogHost,
-      loaded: (posthog) => {
-        if (process.env.NODE_ENV === 'development') posthog.debug()
-      },
-      capture_pageview: false // Disable automatic pageview capture, as we'll handle this manually
-    })
+        posthogClient.init(posthogKey, {
+          api_host: posthogHost,
+          person_profiles: 'always',
+          loaded: (posthog) => {
+            if (process.env.NODE_ENV === 'development') posthog.debug()
+          },
+        })
+        console.log('PostHog initialized with automatic pageview capture')
+  
   }
 }
