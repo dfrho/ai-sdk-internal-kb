@@ -2,7 +2,7 @@ import { Navbar } from '@/components/navbar';
 import { Metadata } from 'next';
 import { Toaster } from 'sonner';
 import './globals.css';
-import { Providers } from '@/components/Providers';
+import Providers from './providers';
 
 export const metadata: Metadata = {
   metadataBase: new URL(
