@@ -8,16 +8,15 @@ if (typeof window !== 'undefined') {
   const consent = localStorage.getItem('cookie-consent');
 
   posthog.init(process.env.POSTHOG_KEY || '', {
-    api_host: process.env.POSTHOG_HOST || 'https://app.posthog.com',
+    api_host: process.env.POSTHOG_HOST || 'https://us.i.posthog.com',
+    person_profiles: 'always',
     loaded: (posthog) => {
       if (process.env.NODE_ENV === 'development') posthog.debug();
-      if (consent === 'false') {
+      if (!consent || consent === 'false') {
         posthog.opt_out_capturing();
       }
     },
-    autocapture: false,
-    capture_pageview: false,
-    disable_session_recording: true,
+    capture_pageview: true,
   });
 }
 
