@@ -1,6 +1,26 @@
+# Internal Knowledge Base
+
+## Overview
+
+This template is a customized version of the [Language Model Middleware](https://sdk.vercel.ai/docs/ai-sdk-core/middleware#language-model-middleware) to perform retrieval augmented generation and enforce guardrails using the [AI SDK](https://sdk.vercel.ai/docs) and [Next.js](https://nextjs.org/).
+
+## Features
+
+- Secure authentication and authorization
+- Document upload and management
+- Advanced search capabilities using Retrieval Augmented Generation (RAG)
+- User-friendly interface for easy navigation and content discovery
+- Analytics for usage tracking and optimization
+
+## Important Notice
+
+**DO NOT upload documents containing Personally Identifiable Information (PII) or private data into the deployed demo version of this application (at https://ai-sdk-internal-kb.vercel.app
+).**
+
+This demo is for illustration purposes only and may not have the full security measures implemented in a production environment.
+
 # Internal Knowledge Base Preview
 
-This template demonstrates the usage of the [Language Model Middleware](https://sdk.vercel.ai/docs/ai-sdk-core/middleware#language-model-middleware) to perform retrieval augmented generation and enforce guardrails using the [AI SDK](https://sdk.vercel.ai/docs) and [Next.js](https://nextjs.org/).
 
 ## Deploy your own
 
@@ -37,3 +57,9 @@ To learn more about the AI SDK or Next.js by Vercel, take a look at the followin
 
 - [AI SDK Documentation](https://sdk.vercel.ai/docs)
 - [Next.js Documentation](https://nextjs.org/docs)
+
+## License
+
+MIT
+
+© 2024 Your Company Name. All rights reserved.
