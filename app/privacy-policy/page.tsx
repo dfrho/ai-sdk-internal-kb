@@ -9,9 +9,9 @@ export default function PrivacyPolicy() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
         <p className="mb-4">
-          This Privacy Policy outlines how Internal Knowledge Base ("we", "our",
-          or "us") collects, uses, and protects your personal information. We
-          are committed to ensuring the privacy and security of our users.
+          This Privacy Policy outlines how Internal Knowledge Base collects,
+          uses, and protects your personal information. We are committed to
+          ensuring the privacy and security of our users.
         </p>
       </section>
 
